@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Aldien Eka Putra — Graphic Design & Video Editing Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Kombinasi 2 Font: Playfair Display (Heading Elegan) & Plus Jakarta Sans (Body Bersih) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-dot"></span>
+        Aldien Eka Putra
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#portfolio">Feeds & Reels</a>
+        <a href="#drive-works">Arsip Karya</a>
+        <a href="#tentang">Pengalaman & CV</a>
+        <a href="#kontak">Kontak</a>
+        <a href="https://wa.me/6285746963495" target="_blank" rel="noopener noreferrer" class="btn-nav mobile-only-cta">Hubungi Saya</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="https://wa.me/6285746963495" target="_blank" rel="noopener noreferrer" class="btn-nav desktop-only-cta">Hubungi Saya</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Buka Menu Navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">✨ Graphic Designer & Content Creator</div>
+        <h1>Halo, saya <span>Muhammad Aldien</span> Eka Putra</h1>
+        <p>
+          Mahasiswa S1 Matematika Universitas Negeri Malang (IPK 3.57/4.00) dengan fokus pada desain grafis, <em>visual branding</em>, video editing, dan pengembangan antarmuka web. Terampil menggunakan Canva, CapCut, Figma, serta HTML & CSS untuk menghadirkan solusi visual yang komunikatif dan estetis.
+        </p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn-primary">Lihat Karya Pilihan ↓</a>
+          <a href="#drive-works" class="btn-secondary">Arsip Google Drive</a>
+        </div>
+      </div>
+
+      <!-- Foto Profil -->
+      <div class="hero-photo-wrap">
+        <div class="profile-frame">
+          <img
+            src="foto-profil.png"
+            alt="Foto Profil Muhammad Aldien Eka Putra"
+            onerror="this.src='https://placehold.co/400x500/E0F2FE/0284C7?text=foto-profil.png'"
+          />
+          <div class="profile-floating-tag">📍 Malang, Jawa Timur</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section (4 Kolom Desktop, 2 Kolom Mobile) -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Instagram Showcase</span>
+        <h2>Feeds & Reels <em>Pilihan</em></h2>
+        <p>Tekan tombol <strong>Pratinjau</strong> untuk memutar atau melihat postingan langsung di halaman ini, atau buka tautan aslinya di Instagram.</p>
+      </div>
+
+      <!-- Filter Tabs (Horizontal Scrollable on Mobile) -->
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all">Semua Karya (19)</button>
+        <button class="filter-btn" data-filter="feeds">Instagram Feeds (9)</button>
+        <button class="filter-btn" data-filter="reels">Instagram Reels (10)</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- Google Drive Works Section (6 Card Terpisah: Feeds & Story di awal) -->
+  <section id="drive-works" class="drive-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete Archive</span>
+        <h2>Katalog Portofolio <em>Google Drive</em></h2>
+        <p>Kumpulan lengkap hasil desain grafis, materi promosi, proyek website, dan produksi konten dalam folder Google Drive.</p>
+      </div>
+
+      <div class="works-grid">
+        <!-- Card 1: Instagram Feeds -->
+        <div class="work-card">
+          <div class="icon-box-new">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+            </svg>
+          </div>
+          <h3>Instagram Feeds</h3>
+          <p>Social Media Branding</p>
+          <a href="LINK_DRIVE_INSTAGRAM_FEEDS" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+        </div>
+
+        <!-- Card 2: Instagram Story -->
+        <div class="work-card">
+          <div class="icon-box-new">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-6 6.75h6m-6 3h6m-6 3h4.5" />
+            </svg>
+          </div>
+          <h3>Instagram Story</h3>
+          <p>Interactive & Event Story</p>
+          <a href="LINK_DRIVE_INSTAGRAM_STORY" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+        </div>
+
+        <!-- Card 3: Creative Poster -->
+        <div class="work-card">
+          <div class="icon-box-new">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+            </svg>
+          </div>
+          <h3>Creative Poster</h3>
+          <p>Project and Campaign</p>
+          <a href="LINK_DRIVE_CREATIVE_POSTER" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+        </div>
+
+        <!-- Card 4: Flyer and Proposal -->
+        <div class="work-card">
+          <div class="icon-box-new">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+            </svg>
+          </div>
+          <h3>Flyer and Proposal</h3>
+          <p>Offers and promotions</p>
+          <a href="LINK_DRIVE_FLYER_PROPOSAL" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+        </div>
+
+        <!-- Card 5: Video Creative -->
+        <div class="work-card">
+          <div class="icon-box-new">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+          </div>
+          <h3>Video Creative</h3>
+          <p>Reels and Educational Video</p>
+          <a href="LINK_DRIVE_VIDEO_CREATIVE" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+        </div>
+
+        <!-- Card 6: Design Website -->
+        <div class="work-card">
+          <div class="icon-box-new">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+            </svg>
+          </div>
+          <h3>Design Website</h3>
+          <p>UI/UX & Web Interface</p>
+          <a href="LINK_DRIVE_DESIGN_WEBSITE" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume / CV Section -->
+  <section id="tentang">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Curriculum Vitae</span>
+        <h2>Pengalaman, Pendidikan & <em>Prestasi</em></h2>
+        <p>Ringkasan latar belakang akademik, pengalaman profesional, organisasi, serta perangkat lunak yang dikuasai.</p>
+      </div>
+
+      <div class="resume-grid">
+        <!-- Pengalaman Kerja -->
+        <div class="resume-card">
+          <h3>💼 Pengalaman Kerja</h3>
+          <div class="timeline-item">
+            <div class="timeline-title">Nomimos Wedding Organizer</div>
+            <div class="timeline-sub">Freelance</div>
+            <span class="timeline-date">Juli – Sekarang</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">WCC – Konten Kreator Malang</div>
+            <div class="timeline-sub">Freelance</div>
+            <span class="timeline-date">Juli – Sekarang</span>
+          </div>
+        </div>
+
+        <!-- Pendidikan & Keahlian Software -->
+        <div class="resume-card">
+          <h3>🎓 Pendidikan & Software</h3>
+          <div class="timeline-item">
+            <div class="timeline-title">Universitas Negeri Malang</div>
+            <div class="timeline-sub">S1 Matematika (IPK 3.57 / 4.00)</div>
+            <span class="timeline-date">2023 – Sekarang</span>
+          </div>
+          <div class="software-block">
+            <div class="timeline-title software-label">Software & Tools</div>
+            <div class="tools-wrap">
+              <span class="tool-pill">Canva</span>
+              <span class="tool-pill">CapCut</span>
+              <span class="tool-pill">Figma</span>
+              <span class="tool-pill">HTML5</span>
+              <span class="tool-pill">CSS3</span>
+              <span class="tool-pill">PHP</span>
+              <span class="tool-pill">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pengalaman Organisasi & Kepanitiaan -->
+        <div class="resume-card">
+          <h3>🏛️ Organisasi & Kepanitiaan</h3>
+          <div class="timeline-item">
+            <div class="timeline-title">UKM Duta Kampus UM</div>
+            <div class="timeline-sub">Wakil Ketua Umum</div>
+            <span class="timeline-date">2024 – 2025</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">UKM Duta Kampus UM</div>
+            <div class="timeline-sub">Anggota Divisi Informasi dan Komunikasi</div>
+            <span class="timeline-date">2023 – 2024</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Pemilihan Duta Kampus UM</div>
+            <div class="timeline-sub">Anggota Divisi PDD</div>
+            <span class="timeline-date">2024 & 2025</span>
+          </div>
+        </div>
+
+        <!-- Prestasi -->
+        <div class="resume-card">
+          <h3>🏆 Prestasi</h3>
+          <div class="timeline-item">
+            <div class="timeline-title">Perunggu – PKM AMLI</div>
+            <div class="timeline-sub">Skim RE (Room 10)</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Pemateri Public Speaking</div>
+            <div class="timeline-sub">LKMM-PD HMD Kimia</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Top 5 – Pemilihan Duta Kampus UM</div>
+            <div class="timeline-sub">Universitas Negeri Malang</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="kontak">
+    <div class="container">
+      <div class="contact-box">
+        <span class="section-tag">Mari Berkolaborasi</span>
+        <h2>Tertarik <em>Bekerja Sama?</em></h2>
+        <p>Terbuka untuk peluang magang, proyek desain grafis, <em>social media management</em>, maupun pembuatan konten video kreatif.</p>
+        <div class="contact-links">
+          <a href="https://wa.me/6285746963495" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            📱 +62 857-4696-3495
+          </a>
+          <a href="https://instagram.com/aldienekaa_" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            📸 @aldienekaa_
+          </a>
+          <a href="mailto:aldien.ekaputra05@gmail.com" class="contact-pill">
+            ✉️ aldien.ekaputra05@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Muhammad Aldien Eka Putra. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Modal Embed Instagram -->
+  <div class="modal-backdrop" id="embedModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <strong id="modalTitle" class="modal-title-text">Pratinjau Karya</strong>
+        <button class="modal-close" id="closeModal" aria-label="Tutup Pratinjau">✕</button>
+      </div>
+      <div id="embedContainer" class="embed-container-box"></div>
+    </div>
+  </div>
+
+  <!-- Instagram Embed Script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+
+  <script>
+    // Mobile Hamburger Menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburgerBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+
+    // Data Portofolio Instagram
+    // Ganti path 'assets/...' dengan file gambar cover asli kamu di folder assets
+    const portfolioItems = [
+      // 9 Feeds
+      {
+        type: 'feeds',
+        title: 'Feeds Design #01',
+        category: 'Visual Branding',
+        url: 'https://www.instagram.com/p/De8DDMmDyhI/',
+        thumb: 'assets/feeds-1.jpg',
+        fallback: 'https://placehold.co/600x750/F0F9FF/0284C7?text=Cover+Feeds+01'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #02',
+        category: 'Graphic Design',
+        url: 'https://www.instagram.com/p/DfCcZlZiazs/',
+        thumb: 'assets/feeds-2.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=Cover+Feeds+02'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #03',
+        category: 'Social Media',
+        url: 'https://www.instagram.com/p/DfeT_qpCWBT/',
+        thumb: 'assets/feeds-3.jpg',
+        fallback: 'https://placehold.co/600x750/F0F9FF/0284C7?text=Cover+Feeds+03'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #04',
+        category: 'Carousel Design',
+        url: 'https://www.instagram.com/p/DcgEeeZibto/',
+        thumb: 'assets/feeds-4.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=Cover+Feeds+04'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #05',
+        category: 'Visual Identity',
+        url: 'https://www.instagram.com/p/DcgDhRMCTfy/',
+        thumb: 'assets/feeds-5.jpg',
+        fallback: 'https://placehold.co/600x750/F0F9FF/0284C7?text=Cover+Feeds+05'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #06',
+        category: 'Carousel Design',
+        url: 'https://www.instagram.com/p/DcgEA87id3x/',
+        thumb: 'assets/feeds-6.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=Cover+Feeds+06'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #07',
+        category: 'Poster & Feeds',
+        url: 'https://www.instagram.com/p/DPlT0CYkhUQ/',
+        thumb: 'assets/feeds-7.jpg',
+        fallback: 'https://placehold.co/600x750/F0F9FF/0284C7?text=Cover+Feeds+07'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #08',
+        category: 'Carousel Design',
+        url: 'https://www.instagram.com/p/DNxaKH75FEW/',
+        thumb: 'assets/feeds-8.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=Cover+Feeds+08'
+      },
+      {
+        type: 'feeds',
+        title: 'Feeds Design #09',
+        category: 'Editorial Feeds',
+        url: 'https://www.instagram.com/p/DNrMrcxS53p/',
+        thumb: 'assets/feeds-9.jpg',
+        fallback: 'https://placehold.co/600x750/F0F9FF/0284C7?text=Cover+Feeds+09'
+      },
+
+      // 10 Reels
+      {
+        type: 'reels',
+        title: 'Reels Video #01',
+        category: 'Video Editing',
+        url: 'https://www.instagram.com/reel/DdufOsdzSGx/',
+        thumb: 'assets/reels-1.jpg',
+        fallback: 'https://placehold.co/600x750/BAE6FD/0C4A6E?text=▶+Cover+Reels+01'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #02',
+        category: 'Content Creation',
+        url: 'https://www.instagram.com/reel/DeGJBdSTmIa/',
+        thumb: 'assets/reels-2.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=▶+Cover+Reels+02'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #03',
+        category: 'Video Editing',
+        url: 'https://www.instagram.com/reel/DeX5vOizgro/',
+        thumb: 'assets/reels-3.jpg',
+        fallback: 'https://placehold.co/600x750/BAE6FD/0C4A6E?text=▶+Cover+Reels+03'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #04',
+        category: 'Event Recap',
+        url: 'https://www.instagram.com/reel/DfwhTc3z-Ud/',
+        thumb: 'assets/reels-4.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=▶+Cover+Reels+04'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #05',
+        category: 'Creative Video',
+        url: 'https://www.instagram.com/reel/Dc-NLWNTarx/',
+        thumb: 'assets/reels-5.jpg',
+        fallback: 'https://placehold.co/600x750/BAE6FD/0C4A6E?text=▶+Cover+Reels+05'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #06',
+        category: 'Video Editing',
+        url: 'https://www.instagram.com/reel/DfWxffEA1PC/',
+        thumb: 'assets/reels-6.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=▶+Cover+Reels+06'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #07',
+        category: 'Content Creation',
+        url: 'https://www.instagram.com/reel/DfV-5X9Tw1T/',
+        thumb: 'assets/reels-7.jpg',
+        fallback: 'https://placehold.co/600x750/BAE6FD/0C4A6E?text=▶+Cover+Reels+07'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #08',
+        category: 'Video Editing',
+        url: 'https://www.instagram.com/reel/De1ikyNgzgv/',
+        thumb: 'assets/reels-8.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=▶+Cover+Reels+08'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #09',
+        category: 'Visual Storytelling',
+        url: 'https://www.instagram.com/reel/DezNVxXzLmu/',
+        thumb: 'assets/reels-9.jpg',
+        fallback: 'https://placehold.co/600x750/BAE6FD/0C4A6E?text=▶+Cover+Reels+09'
+      },
+      {
+        type: 'reels',
+        title: 'Reels Video #10',
+        category: 'Video Editing',
+        url: 'https://www.instagram.com/reel/Dd-NSs_TxaS/',
+        thumb: 'assets/reels-10.jpg',
+        fallback: 'https://placehold.co/600x750/E0F2FE/0369A1?text=▶+Cover+Reels+10'
+      }
+    ];
+
+    const grid = document.getElementById('portfolioGrid');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const modal = document.getElementById('embedModal');
+    const embedContainer = document.getElementById('embedContainer');
+    const modalTitle = document.getElementById('modalTitle');
+    const closeModal = document.getElementById('closeModal');
+
+    function renderCards(filter = 'all') {
+      grid.innerHTML = '';
+      const filtered = filter === 'all'
+        ? portfolioItems
+        : portfolioItems.filter(item => item.type === filter);
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'portfolio-card';
+        const badgeLabel = item.type === 'feeds' ? '🖼️ Feeds' : '🎬 Reels';
+
+        card.innerHTML = `
+          <div class="card-thumb">
+            <span class="type-pill">${badgeLabel}</span>
+            <img src="${item.thumb}" alt="${item.title}" loading="lazy" onerror="this.src='${item.fallback}'" />
+            <div class="card-overlay">
+              <button class="overlay-btn overlay-btn-preview" data-url="${item.url}" data-title="${item.title}">
+                Pratinjau
+              </button>
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="overlay-btn overlay-btn-ig">
+                Buka IG ↗
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-title">${item.title}</div>
+              <div class="card-sub">${item.category}</div>
+            </div>
+            <div class="card-mobile-actions">
+              <button class="mini-action-btn preview-trigger" data-url="${item.url}" data-title="${item.title}" title="Pratinjau">👁️</button>
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="card-arrow" title="Buka di Instagram">↗</a>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      document.querySelectorAll('.overlay-btn-preview, .preview-trigger').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openEmbedModal(btn.dataset.url, btn.dataset.title);
+        });
+      });
+    }
+
+    function openEmbedModal(url, title) {
+      modalTitle.textContent = title;
+      embedContainer.innerHTML = `
+        <blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14" style="width:100%; margin:0 auto;"></blockquote>
+      `;
+      modal.classList.add('open');
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    }
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('open');
+      embedContainer.innerHTML = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+        embedContainer.innerHTML = '';
+      }
+    });
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderCards(btn.dataset.filter);
+      });
+    });
+
+    renderCards('all');
+  </script>
+</body>
+</html>
