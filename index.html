@@ -80,9 +80,9 @@
 
       <!-- Filter Tabs (Horizontal Scrollable on Mobile) -->
       <div class="filter-bar" role="tablist">
-        <button class="filter-btn active" data-filter="all">Semua Karya (19)</button>
+        <button class="filter-btn active" data-filter="all">Semua Karya (20)</button>
         <button class="filter-btn" data-filter="feeds">Instagram Feeds (9)</button>
-        <button class="filter-btn" data-filter="reels">Instagram Reels (10)</button>
+        <button class="filter-btn" data-filter="reels">Instagram Reels (11)</button>
       </div>
 
       <!-- Grid -->
@@ -157,7 +157,7 @@
           </div>
           <h3>Video Creative</h3>
           <p>Reels and Educational Video</p>
-          <a href="https://drive.google.com/drive/folders/1g6txK16BDtB-ul_aqo8QcQd4QMOyZF8g" class="see-more-btn" target=" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
+          <a href="https://drive.google.com/drive/folders/1g6txK16BDtB-ul_aqo8QcQd4QMOyZF8g" class="see-more-btn" target="_blank" rel="noopener noreferrer">See more ↗</a>
         </div>
 
         <!-- Card 6: Design Website -->
@@ -290,6 +290,17 @@
     </div>
   </footer>
 
+  <!-- Floating Music Player (Bisa Mute / Unmute) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/audio.mpeg" type="audio/mpeg" />
+    <source src="assets/audio.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="musicToggle" class="music-fab" aria-label="Mute atau Unmute Musik" title="Musik Latar">
+    <span class="music-icon" id="musicIcon">🔇</span>
+    <span class="music-label" id="musicLabel">Unmute</span>
+  </button>
+
   <!-- Modal Embed Instagram -->
   <div class="modal-backdrop" id="embedModal">
     <div class="modal-content">
@@ -322,7 +333,6 @@
     });
 
     // Data Portofolio Instagram
-    // Ganti path 'assets/...' dengan file gambar cover asli kamu di folder assets
     const portfolioItems = [
       // 9 Feeds
       {
@@ -398,7 +408,7 @@
         fallback: 'https://placehold.co/600x750/F0F9FF/0284C7?text=Cover+Feeds+09'
       },
 
-      // 10 Reels
+      // 11 Reels
       {
         type: 'reels',
         title: 'Reels Video #01',
@@ -574,6 +584,43 @@
     });
 
     renderCards('all');
+
+    // Kontrol Musik Latar (Mute / Unmute)
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    const musicIcon = document.getElementById('musicIcon');
+    const musicLabel = document.getElementById('musicLabel');
+
+    bgMusic.volume = 0.3;
+    let isPlaying = false;
+
+    function updateMusicUI(playing) {
+      isPlaying = playing;
+      musicIcon.textContent = playing ? '🔊' : '🔇';
+      musicLabel.textContent = playing ? 'Mute' : 'Unmute';
+      musicToggle.classList.toggle('playing', playing);
+    }
+
+    musicToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (isPlaying) {
+        bgMusic.pause();
+        bgMusic.muted = true;
+        updateMusicUI(false);
+      } else {
+        bgMusic.muted = false;
+        bgMusic.play().then(() => updateMusicUI(true)).catch(() => {});
+      }
+    });
+
+    // Otomatis berputar saat pengunjung mengklik halaman pertama kali
+    document.addEventListener('click', function autoStartMusic() {
+      if (!isPlaying) {
+        bgMusic.muted = false;
+        bgMusic.play().then(() => updateMusicUI(true)).catch(() => {});
+      }
+      document.removeEventListener('click', autoStartMusic);
+    }, { once: true });
   </script>
 </body>
 </html>
